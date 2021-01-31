@@ -1,0 +1,175 @@
+\documentclass[12pt,a4paper,twoside,french]{rap}
+	\setcounter{secnumdepth}{3}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=black,bookmarksopen=true]{hyperref}
+\usepackage{afterpage}
+\usepackage[ruled,vlined]{algorithm2e}
+\usepackage{alltt}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{array}
+\usepackage[english]{babel}
+\usepackage{bbm}
+\usepackage{bm}
+\usepackage{bookmark}
+\usepackage{booktabs}
+\usepackage{calc}
+\usepackage{cancel}
+\usepackage{caption}
+\usepackage{cite}
+\usepackage{color,soul}
+\usepackage{comment}
+\usepackage{epsfig}
+\usepackage{float}
+%\usepackage[T1]{fontenc}
+\usepackage{gensymb}
+\usepackage{graphicx}
+\usepackage[utf8]{inputenc}
+%\usepackage{hyperref}
+\usepackage{longtable}
+\usepackage{lscape}
+\usepackage{mathtools}
+\usepackage{multicol}
+\usepackage{multirow}
+\usepackage{pgfplots} 
+	\pgfplotsset{compat=newest} 
+	\pgfplotsset{plot coordinates/math parser=false} 
+	\newlength\figureheight 
+	\newlength\figurewidth 
+\usepackage{pdflscape}
+\usepackage[final]{pdfpages} 
+\usepackage{pict2e}
+\usepackage{ragged2e}
+\usepackage{rotating}
+\usepackage{setspace}
+\usepackage{siunitx}
+\usepackage{stmaryrd}
+%\usepackage{subfigure}
+\usepackage{subcaption}
+%\usepackage[caption=false]{subfig}
+\usepackage{tabularx}
+\usepackage{tikz,pgfplots}
+\usepackage[raggedright]{titlesec}
+\usepackage{ulem}
+\usepackage{xcolor,etoolbox}
+\usepackage{yfonts}
+\graphicspath{{images/}}
+%\newcommand{\fnn}{FNN\textsuperscript{2}}
+%\newcommand{\fee}{FE\textsuperscript{2}}
+\newcommand{\fnn}{FNN$ ^{2}\, $}
+\newcommand{\fee}{FE$ ^{2}\, $}
+\newcommand{\tgm}[2][]{^{#1}\textbf{#2}_\text{M}}
+\newcommand{\tgmm}[2][]{^{#1}\textbf{#2}_\text{m}}
+\newcommand{\jump}[1]{\left\llbracket #1\right\rrbracket}
+\newcommand{\mean}[1]{\left\langle #1\right\rangle}
+\newcommand{\grad}{\bm{\nabla}_0}
+\newcommand{\thesistitle}{Generation and data-driven upscaling of open foam representational volume elements}
+\newcommand{\titlech}{Computational homogenization}
+\newcommand{\titleof}{Micro-structure representation}
+\newcommand{\titleres}{Analysis of generated open foam morphologies}
+\newcommand{\titlenn}{Neural Networks}
+\newcommand{\reda}[1]{\color{red} #1\color{black}}
+\newcommand{\red}[1]{\color{black} #1\color{black}}
+\newcommand{\blue}[1]{\color{blue} #1\color{black}}
+\setcounter{tocdepth}{4}
+\begin{document}
+\pagestyle{empty}
+\pagenumbering{roman}
+%\input{titlepage_ULiege}
+\includepdf[offset=10mm -10mm]{Couverture_these_facsa_cotutelle_EN}
+\pagebreak
+\input{members}
+\cleardoublepage
+
+%\input{titlepage_ULB}
+\includepdf[offset=10mm -10mm]{Couverture_these_polytech_cotutelle_EN}
+\input{members}
+\cleardoublepage
+%\afterpage{\clearpage}
+
+%\pagestyle{empty}
+\input{inspiration}
+%\pagebreak
+\afterpage{\clearpage}
+\cleardoublepage
+
+\input{abstract}
+%\pagebreak
+\afterpage{\clearpage}
+\cleardoublepage
+
+\input{abstract-fr}
+%\pagebreak
+\afterpage{\clearpage}
+\cleardoublepage
+
+\input{acknowledgements}
+%\pagebreak
+\afterpage{\clearpage}
+\cleardoublepage
+
+
+\addcontentsline{toc}{chapter}{Contents}
+\tableofcontents
+%\pagebreak
+\afterpage{\clearpage}
+\clearemptydoublepage
+
+\pagestyle{headings}
+\addcontentsline{toc}{chapter}{Abbreviations}
+\input{abbreviations}
+%\pagebreak
+\afterpage{\clearpage}
+\clearemptydoublepage
+
+\listoftables
+\addcontentsline{toc}{chapter}{List of Tables}
+%\pagebreak
+\afterpage{\clearpage}
+\clearemptydoublepage
+
+\listoffigures
+\addcontentsline{toc}{chapter}{List of Figures}
+%\pagebreak
+\afterpage{\clearpage}
+\clearemptydoublepage
+
+\pagenumbering{arabic}
+\input{introduction}
+\afterpage{\clearpage}
+\clearemptydoublepage
+
+\input{homogenization}
+\afterpage{\clearpage}
+\clearemptydoublepage
+
+\input{openfoam}
+\afterpage{\clearpage}
+\clearemptydoublepage
+
+\input{results}
+\afterpage{\clearpage}
+\clearemptydoublepage
+
+\input{ml-nn}
+\afterpage{\clearpage}
+\clearemptydoublepage
+
+\input{conclusions}
+\afterpage{\clearpage}
+\clearemptydoublepage
+
+\input{appendix}
+\afterpage{\clearpage}
+\clearemptydoublepage
+
+\bibliographystyle{unsrt}
+\bibliography{lib}
+\addcontentsline{toc}{chapter}{Bibliography}
+\clearpage
+
+\newpage
+\thispagestyle{empty}
+\mbox{}
+\includepdf[offset=10mm -10mm]{couverture_ULiege_back}
+\end{document}

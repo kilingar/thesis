@@ -1,0 +1,180 @@
+Proposals for modification of the PhD thesis manuscript of
+N. Kilingar
+
+The following proposals for modification were formulated by the jury during the private PhD
+defence (7 th December 2020, 9 AM – 12:45 PM through videoconference). They are split
+into compulsory and optional groups. While applying the compulsory modifications (noted
+CM) is a prerequisite for the public PhD defence (they will be checked for in the revised
+document), the optional modifications would contribute to enhancing the quality of the
+manuscript as well in the jury’s opinion.
+
+Complying with the jury’s decision after deliberation on 7 th December 2020, the candidate
+has to prepare a revised version of the PhD manuscript and submit it to the jury for
+approval before the public defence takes place. Two versions of the revised manuscript
+are to be sent: one in which the applied modifications are highlighted in a different color (to
+allow an efficient verification of the modifications) and a version ready to submit (text
+written entirely in black). These documents are to be submitted by 10 th January 2021.
+
+General CM
+
+GCM1 – reproducibility: ensure that you give systematically all information
+required for an interested reader to be able to reproduce your results in all chapters
+of the manuscript
+%TODO
+
+GCM2 – transparency: give systematically a recommendation (this ideally could be
+expressed as an algorithm to follow) on how to perform all of the trial-error based
+procedures you used in the work
+%TODO
+
+Chapter 1-2
+
+CM1: add a clear identification of gaps in the literature and the proposal of
+corresponding actions in the thesis and their originality with respect to the state of
+the art (SoA) - this can be formatted as a list; highlight personal original
+contributions with respect to a well-defined starting point (i.e. the building blocks
+that were available at the start); recall the specific personal work and contribution to
+the state of the art in each section
+%TODO
+
+explain what size effects are present in the mechanical behavior of foams by an
+illustration of how the foam sample response is expected to change as a function of
+the sample size
+
+CM2: define the limitations of computational homogenization vs localized
+phenomena in the foams (buckling, localized plastic strains)
+%TODO Ludovic notes
+
+CM3: establish a link between second order homogenization and higher order
+continua; justify using a first order approach vs observed foam behavior (no
+softening, at least when in 3D)
+%TODO Intro chap 2
+
+when defining an RVE explain that its definition depends on the physics that is
+aimed at, i.e. for mechanical behavior and for acoustic insulation they are different
+
+Chapter 3-4
+
+CM4: state clearly what are your own developments for geometry generation (wrt B.
+Sonon) and meshing (wrt K. Ehab) in a dedicated paragraph
+%TODO Updated in the Introduction of chapter 3
+
+CM5: explain why a statistical/stochastic description is needed in your work and
+how an “ideal geometry” would perform compared to this
+%TODO
+
+CM6: critically discuss the limitations of the assumptions you use for using a
+(periodic) RVE vs experimentally observed behavior of foams (i.e. strain
+localization); state the domain of validity and the domain of application of the
+simplifications you make
+%TODO Chapter 2 Intro?
+
+give a quantitative recommendation of how to choose the number of grid points for
+a given number of inclusions based on your experience (GCM2)
+
+CM7: list all sources of randomness that you incorporate in your model as well as
+the ones that are neglected (e.g. position along the length of struts where the cross
+section is minimal); justify your choice of the set of parameters you drive and
+classify the ones you disregard in terms of potential criticality on the foam
+mechanical response
+%TODO
+
+CM8: explain in a dedicated paragraph more clearly how the presence of cell walls
+is triggered (open/closed cell decision)
+%TODO Explanation in Section Open / close faces
+
+indicate how the geometry generation parameters can be obtained for a given real
+foam sample based on your experience (GCM2)
+
+mention that computational methods other than FEM could be used as well with
+your approach (e.g. X-FEM)
+
+CM9: explain briefly how your formulation would allow considering beams
+%TODO In edge description
+
+explain how the case of hollow cross sections of struts can be considered
+
+express more clearly how the mesh optimization is performed (moving nodes, but
+keeping the same mesh topology); comment if this approach is good enough for
+large strain analyses and how it could be further improved (GCM1), also by
+verifying how refinement & edge flips were implemented by K. Ehab
+
+comment in more details on why the FEM response is considered to be a good
+match to experiments
+
+mention as outlook that the individual effect of each incorporated morphological
+parameter could be investigated in the future to assess their criticality in a numerical
+model
+
+Chapter 5
+
+CM10: state clearly and concisely your specific personal contributions and how they
+advance the SoA of NN
+%TODO Introduction
+
+sufficient details on the validation technique, choice of the optimization parameters
+and validation sets are missing; the reproducibility of your methodology and work
+needs to be insured (GCM1)
+
+refer to other methods than FE 2 that you could use to incorporate microstructural
+information based on a rapid sweep of the literature
+
+CM11: establish with more clarity the link between FE 2 and NN, including the
+motivation and advantages of the NN approach
+%TODO Introduction of NN
+
+CM12: mention what other surrogate models could have been used (non-
+exhaustive list with references) and their dis/advantages with respect to NN
+%TODO Introduction of NN
+
+CM13: critically discuss in a paragraph whether NN can be intended to be
+employed to find a fully upscaled constitutive behavior for general loading and a
+fully general material behavior; define the context and limitations of your work with
+respect to this discussion; define the range of applicability of the proposed
+approach (and maximum applied strains) vs occurrence of localized phenomena
+%TODO Conclusion
+
+explain how you control the validation error vs overfit and give a recommendation to
+the interested reader; give a recommendation allowing to choose the number of
+epochs; explain your “manual” choice and how to reproduce it by an interested
+reader (GCM2)
+
+comment on how you dealt with possible local minima appearing in the parameter
+optimization of the NN and if there are automated methods available for this
+(GCM2)
+
+explain what “stochastic” refers to in technical terms in the stochastic gradient
+descent approach
+
+explain how do you define the number of nodes and number of layers; give a
+recommendation of how an interested reader could make an informed choice;
+explain what hyperparameters are and how do you perform your trial-error
+procedure in obtaining them (GCM2)
+
+CM14: clarify that clusters are chosen in the beginning of the simulation and kept
+fixed during the simulation; explain how they are chosen and comment on the fixed
+clusters assumption vs evolving stresses and possible internal force redistribution;
+mention what other approaches may be available for clustering; what quantities are
+clustered and why?
+%TODO Section clustering
+
+explain how the FNN 2 approach approximation could be enhanced, e.g.
+simultaneous optimization of both FNNs, instead of the current sequential process
+to decrease the accumulating error
+
+CM15: give the order of magnitude of the prediction time of your networks; when
+comparing the computational time for NN setup to the equivalent number of FE
+simulations, give an example of what size of FE 2 simulation this number would
+correspond to and highlight the advantages of the NN approach (the same trained
+network can be used for any simulation with the same base material)
+%TODO Computstional cost
+
+Chapter 6
+
+CM16: reformulate and strengthen the conclusions with respect to the initial goals
+and identified gaps in the literature instead of a summary of each chapter; highlight
+the advancement of the SoA due to your contribution
+%TODO Comclusions
+
+CM17: more details are expected in the outlook of the work
+%TODO

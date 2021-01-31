@@ -1,0 +1,146 @@
+\documentclass[aspectratio=169,11pt]{beamer}
+\usepackage[latin1]{inputenc}
+%\usepackage[T1]{fontenc}
+\usepackage[english]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usetheme{Singapore}
+\begin{document}
+	\author[Kilingar]{Nanda Gopala Kilingar}
+	\title[]{Generation and data-driven upscaling of
+		open foam representational volume elements}
+	\subtitle{Notes and preparations}
+	%\logo{}
+	\institute{Universit\'e de Li\`ege\\ Universit\'e Libre de Bruxelles}
+	\date{}
+	%\subject{}
+	%\setbeamercovered{transparent}
+	%\setbeamertemplate{navigation symbols}{}
+	\begin{frame}[plain]
+	\maketitle
+\end{frame}
+
+\section{Introduction}
+\begin{frame}
+\frametitle{Introduction to open foam}
+\begin{itemize}
+\item Methodologies to obtain numerical models (Symmetric models, tessellations, surface evolver, image processing)
+\item Morphological properties with some figures Redenbach 2013
+\item Behavioral properties with data from Jung 2017 and Heinze 2018
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Objectives and Methodologies}
+\scriptsize{
+\begin{block}{Aim}
+	\begin{itemize}
+		\item Fast generation of random open foam morphologies using distance fields based inclusion packings.
+		\item Use CT-scan image based data to obtain inclusion packings.
+		\item Implement surrogates to replace complex micro-structures in expensive computational homogenization techniques.
+	\end{itemize}
+\end{block}
+\begin{block}{Means}
+\begin{itemize}
+	\item Conceptualize level set functions to obtain geometrical variations in morphologies that manipulate the distance fields.
+	\item Generate mesh using refinement tools that respect the distance field based morphological constraints.
+	\item Compare morphological indicators with literature to develop possible ranges to the function constraints.
+	\item Analyze numerical behavior of the random morphologies and the CT-scan based morphologies and compare with experiments.
+	\item Study Neural network based surrogates to understand the practical constraints of machine learning methods when applied to real world mechanical problems.
+\end{itemize}
+\end{block}
+}
+\end{frame}
+
+\section{Open foam morpholgies}
+\begin{frame}{Packing generation}
+	\begin{columns}[onlytextwidth]
+		\column[]{0.45\textwidth}
+		\begin{block}{Random Packing}
+			\begin{itemize}
+				\item Generate inclusion packing based on packing indicators from literature
+				\item Generate plateau level set ($ O_P $) using the distance fields and nearest neighbor information
+			\end{itemize}
+		\end{block}
+		\column[]{0.45\textwidth}
+		\begin{block}{CT-scan packing}
+			\begin{itemize}
+				\item Extract CT-scan images from physical foam samples
+				\item Obtain the constituent inclusions forming the foam pores in terms of ellipsoids or polyhedrals
+				\item Generate distance fields based on the extracted inclusions
+			\end{itemize}
+		\end{block}
+	\end{columns}
+\end{frame}
+
+\begin{frame}{Sharp Edges}
+	\begin{itemize}
+		\item .
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Mesh Refinement}
+\begin{itemize}
+	\item .
+\end{itemize}
+\end{frame}
+
+\section{Morphology Analysis}
+\begin{frame}{Morphology Quantification}
+\begin{itemize}
+	\item .
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Finite element modeling}
+\begin{itemize}
+	\item .
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Conclusions \#1 and \#2}
+\begin{itemize}
+	\item .
+\end{itemize}
+\end{frame}
+
+\section{Neural network models}
+\begin{frame}{Neural networks as surrogates}
+\begin{itemize}
+	\item .
+\end{itemize}
+\end{frame}
+
+\begin{frame}{FNNs and RNNs}
+\begin{itemize}
+	\item .
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Study of predictions}
+\begin{itemize}
+	\item .
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Conclusions \#3}
+\begin{itemize}
+	\item .
+\end{itemize}
+\end{frame}
+
+\section{Conslusions}
+\begin{frame}{Summary and perspectives}
+\begin{itemize}
+	\item .
+\end{itemize}
+\end{frame}
+
+\begin{frame}{References}
+\begin{itemize}
+	\item .
+\end{itemize}
+\end{frame}
+
+\end{document}

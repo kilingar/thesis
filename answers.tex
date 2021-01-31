@@ -1,0 +1,233 @@
+\documentclass[12pt]{letter}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{letterbib}
+\usepackage[right=2cm,left=2cm,top=2cm,bottom=2cm]{geometry}
+\usepackage{bm}
+\usepackage{graphicx}
+\usepackage{setspace}
+\usepackage{enumerate}
+\onehalfspacing
+\usepackage{xr}
+\usepackage{hyperref}
+\usepackage{color,soul}
+% operator
+\newcommand{\grad}{\bm{\nabla}_0}
+\newcommand{\ngrad}{D}
+\newcommand{\sgrad}{\stackrel{s}{\grad}}
+
+% functions
+\newcommand{\jump}[1]{\left\llbracket #1\right\rrbracket}
+\newcommand{\mean}[1]{\left\langle #1\right\rangle}
+% mapping\REFMBOUN
+\newcommand{\map}{\mathbf{\varphi}}
+\newcommand{\shear}{G}
+\begin{document}
+
+\begin{letter}{PhD Thesis\\
+Generation and data-driven upscaling of open foam representational volume elements}
+
+\name{Nanda G. Kilingar}
+\address{Jury Members}
+
+\opening{Dear Jury Members,}
+
+I would like to thank you for the time you have spent on going through my thesis and for your valuable inputs and comments. Please find below the responses to the comments and the actions taken in the manuscript.
+\vspace{12pt}
+
+General CM
+\begin{itemize}
+\item GCM1 – reproducibility: ensure that you give systematically all information
+required for an interested reader to be able to reproduce your results in all chapters
+of the manuscript
+\\\textbf{Response} - Various points mentioned in the following comments have been addressed accordingly.
+
+\item GCM2 – transparency: give systematically a recommendation (this ideally could be
+expressed as an algorithm to follow) on how to perform all of the trial-error based
+procedures you used in the work
+\\\textbf{Response} - Various points mentioned in the following comments have been addressed accordingly.
+\end{itemize}
+
+Chapter 1-2
+
+\begin{itemize}
+\item CM1: add a clear identification of gaps in the literature and the proposal of
+corresponding actions in the thesis and their originality with respect to the state of
+the art (SoA) - this can be formatted as a list; highlight personal original
+contributions with respect to a well-defined starting point (i.e. the building blocks
+that were available at the start); recall the specific personal work and contribution to
+the state of the art in each section
+
+\textbf{Response} - Sections 1.4 and 1.5 have been updated to highlight the required details
+
+\item explain what size effects are present in the mechanical behavior of foams by an
+illustration of how the foam sample response is expected to change as a function of
+the sample size
+
+\item CM2: define the limitations of computational homogenization vs localized
+phenomena in the foams (buckling, localized plastic strains)
+\\\textbf{Response} - The limitations have been discussed in Section 2.2 First order Computational homogenization
+
+\item CM3: establish a link between second order homogenization and higher order
+continua; justify using a first order approach vs observed foam behavior (no
+softening, at least when in 3D)
+\\\textbf{Response} - The details have been presented in Section 2.2 First order Computational homogenization
+
+\item when defining an RVE explain that its definition depends on the physics that is
+aimed at, i.e. for mechanical behavior and for acoustic insulation they are different
+
+\end{itemize}
+
+Chapter 3-4
+
+\begin{itemize}
+	
+\item CM4: state clearly what are your own developments for geometry generation (wrt B.
+Sonon) and meshing (wrt K. Ehab) in a dedicated paragraph
+\\\textbf{Response} - The necessary details have been updated and highlighted in Section 3.1 Introduction.
+
+\item CM5: explain why a statistical/stochastic description is needed in your work and
+how an “ideal geometry” would perform compared to this
+\\\textbf{Response} - The necessary details is added and highlighted in Section 4.1 Introduction.
+
+\item CM6: critically discuss the limitations of the assumptions you use for using a
+(periodic) RVE vs experimentally observed behavior of foams (i.e. strain
+localization); state the domain of validity and the domain of application of the
+simplifications you make
+\\\textbf{Response} - The discussion is highlighted in Section 2.1 Introduction
+
+\item give a quantitative recommendation of how to choose the number of grid points for
+a given number of inclusions based on your experience (GCM2)
+\\\textbf{Response} - Details can be found in Section 4.2.2.3 Generation of targeted morphology
+
+\item CM7: list all sources of randomness that you incorporate in your model as well as
+the ones that are neglected (e.g. position along the length of struts where the cross
+section is minimal); justify your choice of the set of parameters you drive and
+classify the ones you disregard in terms of potential criticality on the foam
+mechanical response
+\\\textbf{Response} - The details are provided in the Conclusions of Chapter 3.
+
+\item CM8: explain in a dedicated paragraph more clearly how the presence of cell walls
+is triggered (open/closed cell decision)
+\\\textbf{Response} - Details are provided  in Section 3.4.1 Open / close faces
+
+\item indicate how the geometry generation parameters can be obtained for a given real
+foam sample based on your experience (GCM2)
+\\\textbf{Response} - Details can be found in Section 4.2.2.3 Generation of targeted morphology
+
+\item mention that computational methods other than FEM could be used as well with
+your approach (e.g. X-FEM)
+
+\item CM9: explain briefly how your formulation would allow considering beams
+\\\textbf{Response} - An explanation is provided in Section 4.2.1.3 Edge Length Distribution
+
+\item explain how the case of hollow cross sections of struts can be considered
+
+\item express more clearly how the mesh optimization is performed (moving nodes, but
+keeping the same mesh topology); comment if this approach is good enough for
+large strain analyses and how it could be further improved (GCM1), also by
+verifying how refinement \& edge flips were implemented by K. Ehab
+\\\textbf{Response} - Explanation highlighted in Section 3.6 Finite Element Mesh generation.
+
+\item comment in more details on why the FEM response is considered to be a good
+match to experiments
+
+\item mention as outlook that the individual effect of each incorporated morphological
+parameter could be investigated in the future to assess their criticality in a numerical
+model
+
+\end{itemize}
+
+Chapter 5
+
+\begin{itemize}
+
+\item CM10: state clearly and concisely your specific personal contributions and how they
+advance the SoA of NN
+\\\textbf{Response} - The details are stated and highlighted in Section 5.1 Introduction
+
+\item sufficient details on the validation technique, choice of the optimization parameters
+and validation sets are missing; the reproducibility of your methodology and work
+needs to be insured (GCM1)
+\\\textbf{Response} - Explanation regarding this is provided in Section 5.2.3 Validation and testing of data
+
+\item refer to other methods than FE 2 that you could use to incorporate microstructural
+information based on a rapid sweep of the literature
+
+\item CM11: establish with more clarity the link between FE 2 and NN, including the
+motivation and advantages of the NN approach
+\\\textbf{Response} - The necessary updates are stated and highlighted in Section 5.1 Introduction
+
+\item CM12: mention what other surrogate models could have been used (non-
+exhaustive list with references) and their dis/advantages with respect to NN
+\\\textbf{Response} - The necessary updates are stated and highlighted in Section 5.1 Introduction
+
+\item CM13: critically discuss in a paragraph whether NN can be intended to be
+employed to find a fully upscaled constitutive behavior for general loading and a
+fully general material behavior; define the context and limitations of your work with
+respect to this discussion; define the range of applicability of the proposed
+approach (and maximum applied strains) vs occurrence of localized phenomena
+\\\textbf{Response} - Discussions are presented in the Conclusions of Chapter 5
+
+\item explain how you control the validation error vs overfit and give a recommendation to
+the interested reader; give a recommendation allowing to choose the number of
+epochs; explain your “manual” choice and how to reproduce it by an interested
+reader (GCM2)
+\\\textbf{Response} - A recommendation is provided in Section 5.4.4.2 FNN model
+
+\item comment on how you dealt with possible local minima appearing in the parameter
+optimization of the NN and if there are automated methods available for this
+(GCM2)
+\\\textbf{Response} - Comments are highlighted in Section 5.4.4.2 FNN model
+
+\item explain what “stochastic” refers to in technical terms in the stochastic gradient
+descent approach
+
+\item explain how do you define the number of nodes and number of layers; give a
+recommendation of how an interested reader could make an informed choice;
+explain what hyperparameters are and how do you perform your trial-error
+procedure in obtaining them (GCM2)
+\\\textbf{Response} - Explanation regarding this is provided in Section 5.2.3 Validation and testing of data
+
+\item CM14: clarify that clusters are chosen in the beginning of the simulation and kept
+fixed during the simulation; explain how they are chosen and comment on the fixed
+clusters assumption vs evolving stresses and possible internal force redistribution;
+mention what other approaches may be available for clustering; what quantities are
+clustered and why?
+\\\textbf{Response} - Clarifications and details are provided in Section 5.3.5 State-based Representation - Clustering
+
+\item explain how the FNN 2 approach approximation could be enhanced, e.g.
+simultaneous optimization of both FNNs, instead of the current sequential process
+to decrease the accumulating error
+
+\item CM15: give the order of magnitude of the prediction time of your networks; when
+comparing the computational time for NN setup to the equivalent number of FE
+simulations, give an example of what size of FE 2 simulation this number would
+correspond to and highlight the advantages of the NN approach (the same trained
+network can be used for any simulation with the same base material)
+\\\textbf{Response} - Sections 5.4.4 and 5.5.7.7 have been updated and highlighted to discuss the computational costs involved
+
+\end{itemize}
+Chapter 6
+
+\begin{itemize}
+
+\item CM16: reformulate and strengthen the conclusions with respect to the initial goals
+and identified gaps in the literature instead of a summary of each chapter; highlight
+the advancement of the SoA due to your contribution
+
+\textbf{Response} - The conclusion has been reformulated in the manuscript and necessary parts highlighted.
+
+\item CM17: more details are expected in the outlook of the work
+
+\textbf{Response} - The outlook and the scope has been updated in the conclusions.
+\end{itemize}
+
+\end{letter}
+
+
+
+\end{document}
+
+
+
